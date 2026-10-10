@@ -1,0 +1,163 @@
+@font-face {
+  font-family: MsSansSerif; /* set name */
+  src: url(./Files/MSW98UI-Regular.woff2); /* url of the font */
+}
+
+@font-face {
+  font-family: MSBold; /* set name */
+  src: url(./Files/MSW98UI-Bold.woff2); /* url of the font */
+}
+
+#FooterBar {
+    background-color: #F094B1;
+    border-style: outset;
+    border-width:2px;
+    display:flex;
+    flex-direction:row;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height:fit-content;
+    width:100%;
+    z-index: 99999;
+}
+
+.menuButton {
+    background-color: #F094B1;
+    border-style: outset;
+    border-width:2px;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+    cursor: pointer;
+}
+
+h4 {
+    margin: .5em;
+    font-family: MsSansSerif;
+}
+
+.desktopIcon {
+    background-color: transparent;
+    border-style: none;
+    cursor:pointer;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    user-select: none;
+    image-rendering: pixelated;
+}
+
+.desktopIcon :visited {
+    font-style: normal;
+    text-decoration: none;
+}
+
+#Github {
+    top: 30px;
+    left: 30px;
+}
+
+#LinkedIn {
+    top: 160px;
+    left: 30px;
+}
+
+#Resume {
+    top: 290px;
+    left: 30px;
+}
+
+#Projects {
+    top: 420px;
+    left: 30px;
+}
+
+#Resources {
+    top: 550px;
+    left: 30px;
+}
+
+#BG {
+    height:100%;
+    background-color: #f6c9ff;
+}
+
+h3 {
+    margin:.5em;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: MSBold;
+}
+
+h2 {
+    margin-left: 5px;
+}
+
+#Clock {
+    border-style: inset;
+    background-color: #F094B1;
+    font-family: MsSansSerif;
+    margin: 3px;
+    align-self: flex-end;
+    justify-self: flex-end;
+    position: fixed;
+    right:5px;
+
+}
+
+p {
+    margin: .25em;
+}
+
+.pane {
+    position: absolute;
+    min-width: 250px;
+    color: black;
+    background-color: #F094B1;
+    border-style:outset;
+    border-width: 2px;
+    font-family: MsSansSerif;
+    user-select: none;
+}
+
+.textbox {
+    background-color:cornsilk;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    border-style: inset;
+    border-width: 2px;
+
+}
+
+.textLink {
+    margin-left: 5px;
+}
+
+button {
+    padding: 0px;
+}
+
+.title {
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.xButton {
+    border-style: outset;
+    border-width: 2px;
+    background-color:#F094B1;
+    justify-self: flex-end;
+    margin: 2px;
+    padding: 2px 5px;
+    font-family: MSBold;
+}

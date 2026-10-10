@@ -1,0 +1,67 @@
+<head>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div id="BG">
+    <a class="desktopIcon" id="Github" href="https://github.com/madelinestanczak">
+        <img src="./files/github.png" width="80px" height="80px">
+        <h3>Github</h3>
+    </a>
+    <a class="desktopIcon" id="LinkedIn" href="https://linkedin.com/in/madeline-stanczak-70021b30a">
+        <img src="./files/linkedin.png" width="80px" height="80px">
+        <h3>LinkedIn</h3>
+    </a>
+    <button class="desktopIcon" id="Resume" onclick="Resume()">
+        <img src="./files/text_file.png" width="80px" height="80px">
+        <h3>Resume</h3>
+    </button>
+     <a class="desktopIcon" id="Projects" href="https://linkedin.com/in/madeline-stanczak-70021b30a">
+        <img src="./files/workspace.png" width="80px" height="80px">
+        <h3>Projects</h3>
+    </a>
+    <button class="desktopIcon" id="Resources" onclick="Resources()">
+        <img src="./files/cd_drive.png" width="80px" height="80px">
+        <h3>Resources</h3>
+    </button>
+
+    <div class="pane" id="ResourcesPanel" style="left: 25vw; top: 30vh; display: none;">
+        <div class="title">
+            <p>Resources.txt</p>
+            <button class="xButton" onclick="Resources()">X</button>
+        </div>
+        <div class="textbox">
+            <div spellcheck="false">
+                <h2>Icons:</h2>
+                <a class="textLink" href="https://aconfuseddragon.itch.io/windows-95-plus-1">Icon Pack 1</a>
+                <a class="textLink" href="https://aconfuseddragon.itch.io/windows-95-plus-2/">Icon Pack 2</a>
+                <h2>Fonts:</h2>
+                <a class="textLink" href="https://martyr.shop/fonts/ms-w98-ui/">Windows 98 Font</a>
+                
+
+            </div>
+        </div>
+    </div>
+     <div class="pane" id="ResumePanel" style="left: 60vw; top: 7vh; display: none;">
+        <div class="title">
+            <p>Resume.txt</p>
+            <button class="xButton" onclick="Resume()">X</button>
+        </div>
+        <div class="textbox">
+            <iframe src="./Files/resume.pdf#view=FitH&toolbar=0" width="850px" height="1100px"></iframe>
+        </div>
+    </div>
+    </div>
+    <div id="FooterBar">
+        <button class="menuButton" id="StartButton">
+            <img src="./Files/win95.png" width="20px" height="20px">
+            <h4>Start</h4>
+        </button>
+        <div id="Clock">
+            <p>00:00</p>
+        </div>
+    </div>
+    <script src="panes.js" async defer></script>
+    <script src="idex.js"></script>
+</body>
