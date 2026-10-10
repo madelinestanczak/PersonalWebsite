@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
 
-<body>
+<body onload="startTime()">
 
     <div id="BG">
     <a class="desktopIcon" id="Github" href="https://github.com/madelinestanczak">
@@ -17,15 +17,50 @@
         <img src="./files/text_file.png" width="80px" height="80px">
         <h3>Resume</h3>
     </button>
-     <a class="desktopIcon" id="Projects" href="https://linkedin.com/in/madeline-stanczak-70021b30a">
+     <button class="desktopIcon" id="Projects" onclick="Projects()">
         <img src="./files/workspace.png" width="80px" height="80px">
         <h3>Projects</h3>
-    </a>
+     </button>
     <button class="desktopIcon" id="Resources" onclick="Resources()">
         <img src="./files/cd_drive.png" width="80px" height="80px">
         <h3>Resources</h3>
     </button>
+      <button class="desktopIcon" id="Paint" onclick="Paint()">
+        <img src="./files/paint.png" width="80px" height="80px">
+        <h3>Paint</h3>
+    </button>
+    <button class="desktopIcon" id="AboutMe" onclick="AboutMe()">
+        <img src="./files/briefcase.png" width="80px" height="80px">
+        <h3>About Me</h3>
+    </button>
 
+
+
+    <div class="pane" id="AboutMePanel" style="left: 40vw; top: 20vh; display: block;">
+        <div class="title">
+            <p>AboutMe.txt</p>
+            <button class="xButton" onclick="AboutMe()">X</button>
+        </div>
+        <div class="textbox">
+            <div id="AboutMeBox" spellcheck="false">
+                <div class="verticalFlex">
+                    <img id="Headshot" src="./Files/headshot.png" width="150px" height="150px">
+                    <div>
+                        <h1>Madeline Stanczak</h1>
+                    <h3>Developer based in NE Ohio</h3>
+                    <h4>C#, Unity, web stuff, C++</h4>
+                    </div>
+                </div>
+                <p>Above all, I'm interested in the ways technology can connect us,</p>
+                <p>even though it often serves to do the opposite. I make games,</p>
+                <p>but am trying to learn a lot more. 100% human, all the time.</p>
+                <h2 id="SomethingCool">Let's make something cool together.</h2>
+                <a class="textLink" id="CTA" href="mailto:maddiestanczak659@gmail.com">Contact Me</a>
+                
+
+            </div>
+        </div>
+    </div>
     <div class="pane" id="ResourcesPanel" style="left: 25vw; top: 30vh; display: none;">
         <div class="title">
             <p>Resources.txt</p>
@@ -43,6 +78,77 @@
             </div>
         </div>
     </div>
+     <div class="pane" id="ProjectsPanel" style="left: 40vw; top: 60vh; display: none;">
+        <div class="title">
+            <p>Projects.txt</p>
+            <button class="xButton" onclick="Projects()">X</button>
+        </div>
+        <div class="textbox">
+            <div spellcheck="false">
+                <h2>Chopped!</h2>
+                <p>A game created by a small team in 24 hours <br> about chopping veggies and making curries.</p>
+                <a class="textLink" href="https://shendgames.itch.io/chopped-11">Play it now!</a>
+                <h2>Masks of Ruin</h2>
+                <p>A game created solo in 36 hours for Winter<br> MelonJam about climbing a tower using masks.</p>
+                <a class="textLink" href="https://shendgames.itch.io/masks-of-ruin">Play it now!</a>
+                
+
+            </div>
+        </div>
+    </div>
+    <div class="pane" id="PaintPanel" style="left: 21vw; top: 10vh; display: none;">
+         <div class="title">
+            <p>Paint.exe</p>
+            <button class="xButton" onclick="Paint()">X</button>
+        </div>
+        <div class="textbox">
+            <div class="container">
+        <div class="field">
+           <canvas id="canvas" width="200px" height="160px"></canvas> 
+            <canvas id="canvasOverlay" width="200px" height="160px"></canvas>
+            <div class="tools">
+                <input type="range" min="1" max="30" id="penSize" class="penSize" onInput="drawWidth = this.value">
+            </div>
+        </div>
+
+        <div id="currentSwatches">
+            <div id="activeSwatch1" ></div>
+            <div id="activeSwatch2" ></div>
+        </div>
+        <div class="swatchRow">
+            <div id="swatch1" class="paintSwatch" style="background-color: black;"></div>
+            <div id="swatch2" class="paintSwatch" style="background-color: #572636;"></div>
+            <div id="swatch3" class="paintSwatch" style="background-color: #703636"></div>
+            <div id="swatch4" class="paintSwatch" style="background-color: #755638;"></div>
+            <div id="swatch5" class="paintSwatch" style="background-color: #756e38;"></div>
+            <div id="swatch6" class="paintSwatch" style="background-color: #557538;"></div>
+            <div id="swatch7" class="paintSwatch" style="background-color: #387840;"></div>
+            <div id="swatch8" class="paintSwatch" style="background-color: #387a62;"></div>
+            <div id="swatch9" class="paintSwatch" style="background-color: #386a7a;"></div>
+            <div id="swatch10" class="paintSwatch" style="background-color: #384078;"></div>
+            <div id="swatch11" class="paintSwatch" style="background-color: #49397d;"></div>
+            <div id="swatch12" class="paintSwatch" style="background-color: #57397d;"></div>
+            <div id="swatch13" class="paintSwatch" style="background-color: white;"></div>
+            <div id="swatch14" class="paintSwatch" style="background-color: #ffe8f0;"></div>
+            <div id="swatch15" class="paintSwatch" style="background-color: #ff7a7a;"></div>
+            <div id="swatch16" class="paintSwatch" style="background-color: #ffba7a;"></div>
+            <div id="swatch17" class="paintSwatch" style="background-color: #ffef7a;"></div>
+            <div id="swatch18" class="paintSwatch" style="background-color: #b8ff7a;"></div>
+            <div id="swatch19" class="paintSwatch" style="background-color: #7aff8a;"></div>
+            <div id="swatch20" class="paintSwatch" style="background-color: #7affce;"></div>
+            <div id="swatch21" class="paintSwatch" style="background-color: #7adeff;"></div>
+            <div id="swatch22" class="paintSwatch" style="background-color: #7788fc;"></div>
+            <div id="swatch23" class="paintSwatch" style="background-color: #9677fc;"></div>
+            <div id="swatch24" class="paintSwatch" style="background-color: #b177fc;"></div>
+        </div>
+        <script src="main.js"></script>
+        <script scr="panes.js"></script>
+</div>
+    <div id="data"></div>
+</html>
+
+        </div>
+    </div>
      <div class="pane" id="ResumePanel" style="left: 60vw; top: 7vh; display: none;">
         <div class="title">
             <p>Resume.txt</p>
@@ -58,8 +164,28 @@
             <img src="./Files/win95.png" width="20px" height="20px">
             <h4>Start</h4>
         </button>
-        <div id="Clock">
-            <p>00:00</p>
+        <button class="menuButton" id="AboutMeButton" style="display:flex">
+            <img src="./Files/briefcase.png" width="20px" height="20px">
+            <h4>About Me</h4>
+        </button>
+        <button class="menuButton" id="ResumeButton" style="display:none">
+            <img src="./Files/text_file.png" width="20px" height="20px">
+            <h4>Resume</h4>
+        </button>
+        <button class="menuButton" id="ProjectsButton" style="display:none">
+            <img src="./Files/workspace.png" width="20px" height="20px">
+            <h4>Projects</h4>
+        </button>
+        <button class="menuButton" id="ResourcesButton" style="display:none">
+            <img src="./Files/cd_drive.png" width="20px" height="20px">
+            <h4>Resources</h4>
+        </button>
+        <button class="menuButton" id="PaintButton" style="display:none">
+            <img src="./Files/paint.png" width="20px" height="20px">
+            <h4>Paint</h4>
+        </button>
+        <div id="Clock" onload="startTime()">
+            <p id="ClockText"></p>
         </div>
     </div>
     <script src="panes.js" async defer></script>

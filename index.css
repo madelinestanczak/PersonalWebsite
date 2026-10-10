@@ -84,6 +84,16 @@ h4 {
     left: 30px;
 }
 
+#Paint {
+    top: 680px;
+    left: 30px;
+}
+
+#AboutMe {
+    top: 30px;
+    left: 130px;
+}
+
 #BG {
     height:100%;
     background-color: #f6c9ff;
@@ -160,4 +170,171 @@ button {
     margin: 2px;
     padding: 2px 5px;
     font-family: MSBold;
+}
+
+
+#canvas {
+    position: absolute;
+    border-style: inset;
+    border-color: black;
+    border-width: 3px;
+    z-index: 1;
+}
+
+
+#lineGuide {
+    position: absolute;
+    z-index: 2;
+
+}
+
+.circleGuide {
+    position: absolute;
+    border-radius: 100%;
+    z-index: 2;
+}
+
+.field {
+    position: relative;
+    z-index: 3;
+}
+
+
+canvas {
+    width: 1000px;
+    height: 800px;
+    image-rendering: pixelated;
+}
+
+#canvasOverlay {
+    z-index: 5;
+    border: transparent;
+    border-style:dotted;
+    border-width: 3px;
+    position: relative;
+}
+
+.paintSwatch {
+    border-style: inset;
+    border-width: 3px;
+    border-color: #d15a80;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #ffe8f0;
+    border-top: #d15a80;
+    border-style: groove;
+    align-self: flex-end;
+    width: 100%;
+    bottom: 0;
+    margin: 0px;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    padding-left: 2px;
+    position:sticky;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+#currentSwatches {
+    background-color: antiquewhite;
+    border-style: inset;
+    border-color: #d15a80;
+    border-width: 3px;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#activeSwatch1 {
+    background-color: black;
+    position:absolute;
+    top: 9px;
+    left: 9px;
+    z-index: 2;
+    border-style: outset;
+    margin: 0;
+    border-width: 3px;
+    border-color: #d15a80;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#activeSwatch2 {
+    background-color: white;
+    position:absolute;
+    top:30px;
+    left: 30px;
+    border-style: outset;
+    margin:0;
+    border-width: 3px;
+    border-color: #d15a80;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.swatchRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 500px;
+
+}
+
+input {
+    max-width: 100px;
+}
+
+body {
+    overflow: hidden;
+}
+
+#CTA {
+    background-color: #F094B1;
+    border-style: outset;
+    border-width: 2px;;
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    justify-self: center;
+    align-self: center;
+}
+
+#AboutMeBox {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#SomethingCool {
+    align-self: center;
+}
+
+.verticalFlex {
+    display: flex;
+    flex-direction: row;
+}
+
+#Headshot {
+    margin: 5px;
 }
