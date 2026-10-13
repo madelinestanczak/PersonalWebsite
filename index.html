@@ -1,5 +1,7 @@
 <head>
     <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    "
 </head>
 
 <body onload="startTime()">
@@ -36,7 +38,7 @@
 
 
 
-    <div class="pane" id="AboutMePanel" style="left: 40vw; top: 20vh; display: block;">
+    <div class="pane" id="AboutMePanel" >
         <div class="title">
             <p>AboutMe.txt</p>
             <button class="xButton" onclick="AboutMe()">X</button>
@@ -61,6 +63,22 @@
             </div>
         </div>
     </div>
+
+    <div class="pane" id="ErrorPanel" style="left: 35vw; top: 40vh;">
+        <div class="title">
+            <p>Error</p>
+            <button class="xButton" onclick="Resources()">X</button>
+        </div>
+        <div class="textbox">
+            <div spellcheck="false">
+                <h2>Critical Error</h2>
+                <p>This site was not designed<br>for mobile devices! Please <br> visit on a desktop computer!</p>
+                
+            </div>
+        </div>
+    </div>
+    
+
     <div class="pane" id="ResourcesPanel" style="left: 25vw; top: 30vh; display: none;">
         <div class="title">
             <p>Resources.txt</p>
@@ -153,7 +171,7 @@
 
         </div>
     </div>
-     <div class="pane" id="ResumePanel" style="left: 60vw; top: 7vh; display: none;">
+     <div class="pane" id="ResumePanel" style="left: 60vw; top: 7vh;">
         <div class="title">
             <p>Resume.txt</p>
             <button class="xButton" onclick="Resume()">X</button>

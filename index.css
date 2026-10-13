@@ -339,3 +339,27 @@ body {
 #Headshot {
     margin: 5px;
 }
+
+#AboutMePanel {
+    left: 40vw; top: 20vh; display: block;
+}
+
+#ErrorPanel {
+    display: none;
+}
+
+#ResumePanel {
+    display: none;
+    left: 60vw;
+}
+
+@media (max-width: 500px){
+    #AboutMePanel{
+        min-width: 100%;
+        left: 0vw;
+    }
+    body {
+        overflow: scroll
+    }
+    
+}
